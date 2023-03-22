@@ -37,22 +37,22 @@ let active = false; // exempel för att visa att du kan lägga till klass för a
 
 let achievements = [
     {
-        description: 'Museet är redo att öppna, grattis! ',
+        description: 'Dom kallar på mig...',
         requiredUpgrades: 1,
         acquired: false,
     },
     {
-        description: 'Nu börjar det likna något, fortsätt gräva!',
+        description: 'Dom vill ta över...',
         requiredUpgrades: 10,
         acquired: false,
     },
     {
-        description: 'Klickare, med licens att klicka!',
+        description: 'Jag hör dom...',
         requiredClicks: 10,
         acquired: false,
     },
     {
-        description: 'Tac-2 god!',
+        description: 'Jag följer rösterna...',
         requiredClicks: 10000,
         acquired: false,
     },
@@ -163,22 +163,22 @@ window.addEventListener('load', (event) => {
  */
 upgrades = [
     {
-        name: 'Sop',
+        name: 'Depression',
         cost: 10,
         amount: 1,
     },
     {
-        name: 'Kvalitetsspade',
+        name: 'Alkoholmissbruk',
         cost: 50,
         clicks: 2,
     },
     {
-        name: 'Skottkärra',
-        cost: 100,
-        amount: 10,
+        name: 'Drogmissbruk',
+        cost: 200,
+        clicks: 5,
     },
     {
-        name: 'Grävmaskin',
+        name: 'Schizofreni',
         cost: 1000,
         amount: 100,
     },
@@ -213,19 +213,19 @@ function createCard(upgrade) {
     } else {
         header.textContent = `${upgrade.name}, +${upgrade.clicks} per klick.`;
     }
-    cost.textContent = `Köp för ${upgrade.cost} benbitar.`;
+    cost.textContent = `Köp för ${upgrade.cost} röster.`;
 
     card.addEventListener('click', (e) => {
         if (money >= upgrade.cost) {
             acquiredUpgrades++;
             money -= upgrade.cost;
             upgrade.cost *= 1.5;
-            cost.textContent = 'Köp för ' + upgrade.cost + ' benbitar';
+            cost.textContent = 'Köp för ' + upgrade.cost + ' röster';
             moneyPerSecond += upgrade.amount ? upgrade.amount : 0;
             moneyPerClick += upgrade.clicks ? upgrade.clicks : 0;
-            message('Grattis du har köpt en uppgradering!', 'success');
+            message('Du hör dom, dom kallar på dig', 'success');
         } else {
-            message('Du har inte råd.', 'warning');
+            message('Du måste lyssna på rösterna mer', 'warning');
         }
     });
 
