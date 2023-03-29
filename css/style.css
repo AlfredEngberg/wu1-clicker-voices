@@ -6,6 +6,7 @@
     --color-dark: hsl(27, 23%, 17%);
     --color-light: hsl(0, 18%, 89%);
     --color-dark-transparent: hsla(360, 10%, 10%, 0.2);
+    --color-card: hsla(32, 89%, 17%, 0.25);
 
     --step--1: clamp(0.94rem, calc(0.94rem + 0vw), 0.94rem);
     --step-0: clamp(1.13rem, calc(1.08rem + 0.22vw), 1.25rem);
@@ -85,7 +86,7 @@ audio {
     height: 100%;
     background: linear-gradient(
         0deg,
-        var(--color-light),
+        var(--color-dark),
         var(--color-dark-transparent)
     );
 }
@@ -108,7 +109,7 @@ audio {
     grid-area: stack;
     place-self: end;
     padding: var(--space-m-l) 0;
-    color: var(--color-dark);
+    color: var(--color-light);
 }
 
 @media (max-width: 30rem) {
@@ -217,9 +218,10 @@ audio {
     display: flex;
     justify-content: space-between;
     cursor: pointer;
-    border: 1px solid var(--color-dark-transparent);
+    border: 4px solid var(--color-dark-transparent);
     margin: var(--space-xs-s) 0;
     padding: var(--space-s-m) var(--space-xs-s);
+    background-color: var(--color-card);
 }
 
 .card:hover {

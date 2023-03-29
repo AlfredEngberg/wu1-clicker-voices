@@ -19,19 +19,15 @@ const audioAchievement = document.querySelector('#swoosh');
 const voice1 = document.querySelector("#with_you");
 const voice2 = document.querySelector("#back_alive");
 const voice3 = document.querySelector("#your_escape");
-const voice4 = document.querySelector("#astral_plane");
 const voice5 = document.querySelector("#eerie_whisper");
 const voice6 = document.querySelector("#crying");
 const voice7 = document.querySelector("#four_whispers");
-const voice8 = document.querySelector("#help_us");
 const voice9 = document.querySelector("#man_noices");
 const voice10 = document.querySelector("#no_time");
 const voice11 = document.querySelector("#theyre_here");
 const voice12 = document.querySelector("#where_are_you");
 const voice13 = document.querySelector("#wake_up");
-const voice14 = document.querySelector("#voices_crying");
 const voice15 = document.querySelector("#whispers");
-const voice16 = document.querySelector("#fatRat");
 const voice17 = document.querySelector("#dj_outlaw");
 
 
@@ -56,7 +52,7 @@ let active = false; // exempel för att visa att du kan lägga till klass för a
 // requiredSOMETHING är vad som krävs för att få dem
 
 
-// antal achivments = 4 av 16
+// antal achivments = 6 av 16
 let achievements = [
     {
         description: 'Dom kallar på mig...',
@@ -210,9 +206,14 @@ upgrades = [
         clicks: 5,
     },
     {
-        name: 'Schizofreni',
+        name: 'Paranoid',
         cost: 1000,
         amount: 100,
+    },
+    {
+        name: 'Schizofreni',
+        cost: 100000,
+        amount: 1000,
     },
 ];
 
@@ -306,14 +307,6 @@ function message(text, type) {
         voice11.play();
     } else if (achievement === 12) {
         voice12.play();
-    } else if (achievement === 13) {
-        voice13.play();
-    } else if (achievement === 14) {
-        voice14.play();
-    } else if (achievement === 15) {
-        voice15.play();
-    } else if (achievement === 16) {
-        voice16.play();
     }
     setTimeout(() => {
         p.parentNode.removeChild(p);
