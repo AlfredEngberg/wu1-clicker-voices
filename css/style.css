@@ -40,10 +40,13 @@ a:link {
     background-color: transparent;
     text-decoration: none;
  }
+
+/*
  a:active {
     color: var(--color-light);
     background-color: transparent;
  }
+*/
 
 h1 {
     font-size: var(--step-2);

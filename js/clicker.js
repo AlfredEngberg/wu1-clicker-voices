@@ -19,16 +19,16 @@ const audioAchievement = document.querySelector('#swoosh');
 const voice1 = document.querySelector("#with_you");
 const voice2 = document.querySelector("#back_alive");
 const voice3 = document.querySelector("#your_escape");
-const voice5 = document.querySelector("#eerie_whisper");
-const voice6 = document.querySelector("#crying");
-const voice7 = document.querySelector("#four_whispers");
-const voice9 = document.querySelector("#man_noices");
-const voice10 = document.querySelector("#no_time");
-const voice11 = document.querySelector("#theyre_here");
-const voice12 = document.querySelector("#where_are_you");
-const voice13 = document.querySelector("#wake_up");
-const voice15 = document.querySelector("#whispers");
-const voice17 = document.querySelector("#dj_outlaw");
+const voice4 = document.querySelector("#eerie_whisper");
+const voice5 = document.querySelector("#crying");
+const voice6 = document.querySelector("#four_whispers");
+const voice7 = document.querySelector("#man_noices");
+const voice8 = document.querySelector("#no_time");
+const voice9 = document.querySelector("#theyre_here");
+const voice10 = document.querySelector("#where_are_you");
+const voice11 = document.querySelector("#wake_up");
+const voice12 = document.querySelector("#whispers");
+const voice13 = document.querySelector("#dj_outlaw");
 
 
 /* Följande variabler använder vi för att hålla reda på hur mycket pengar som
@@ -52,7 +52,7 @@ let active = false; // exempel för att visa att du kan lägga till klass för a
 // requiredSOMETHING är vad som krävs för att få dem
 
 
-// antal achivments = 6 av 16
+// antal achivments = 6 av 13
 let achievements = [
     {
         description: 'Dom kallar på mig...',
@@ -84,6 +84,22 @@ let achievements = [
         requiredUpgrades: 15,
         acquired: false,
     },
+    {
+        description: 'jag hör rösternas vilja...',
+        requiredUpgrades: 20,
+        acquired: false,
+    },
+    {
+    description: 'Rösterna är mer tydliga...',
+    requiredClicks: 50,
+    acquired: false,
+    },
+    {
+        description: 'Rösterna är mer tydliga...',
+        requiredClicks: 100,
+        acquired: false,
+        },
+
 ];
 
 /* Med ett valt element, som knappen i detta fall så kan vi skapa listeners
@@ -129,7 +145,7 @@ function step(timestamp) {
     }
 
     if (moneyPerSecond > 0 && !active) {
-        mpsTracker.classList.add('active');
+        // mpsTracker.classList.add('active');
         active = true;
     }
 
@@ -202,7 +218,7 @@ upgrades = [
     },
     {
         name: 'Drogmissbruk',
-        cost: 2,
+        cost: 250,
         clicks: 5,
     },
     {
@@ -280,7 +296,6 @@ function message(text, type) {
     p.textContent = text;
     msgbox.appendChild(p);
     if (type === 'achievement') {
-        audioAchievement.play();
         achievement++
     }
     if (achievement === 1) {
@@ -307,8 +322,10 @@ function message(text, type) {
         voice11.play();
     } else if (achievement === 12) {
         voice12.play();
-    }
+    } else if (achievement === 13) {
+        voice12.play();
     setTimeout(() => {
         p.parentNode.removeChild(p);
     }, 2000);
+    }
 }
