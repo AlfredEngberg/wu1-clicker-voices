@@ -1,4 +1,5 @@
 ## log1
+
 Jag kom på idén om rösterna klicker och hittade 17 röster varav 1 behöver fixas
 
 ## log2

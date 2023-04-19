@@ -1,3 +1,4 @@
+    ```
     {
         title: 'Lyssnaren',
         tagline: 'En klicker där du aldrig är säker om det är spelet eller rösterna',
@@ -5,6 +6,7 @@
         git: 'https://github.com/AlfredEngberg/wu1-clicker-voices',
         author: 'Alfred Engberg'
     },
+```
 
 # Clicker, webbprojekt
 
