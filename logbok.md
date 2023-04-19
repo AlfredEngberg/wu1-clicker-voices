@@ -34,4 +34,8 @@ Jag lade till några acivements.
 
 Jag fixade lite med credits också.
 
+## log5
 
+Jag lagade popupp medelanderna, det är allt
+
+Det blir ingen nästa gång :(

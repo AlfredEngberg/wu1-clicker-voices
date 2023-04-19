@@ -324,8 +324,8 @@ function message(text, type) {
         voice12.play();
     } else if (achievement === 13) {
         voice12.play();
+    }
     setTimeout(() => {
         p.parentNode.removeChild(p);
     }, 2000);
-    }
 }

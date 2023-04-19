@@ -1,3 +1,11 @@
+    {
+        title: 'Lyssnaren',
+        tagline: 'En klicker där du aldrig är säker om det är spelet eller rösterna',
+        url: 'https://alfredengberg.github.io/wu1-clicker-voices/',
+        git: 'https://github.com/AlfredEngberg/wu1-clicker-voices',
+        author: 'Alfred Engberg'
+    },
+
 # Clicker, webbprojekt
 
 Du har fått i uppdrag att designa och skapa ett clicker-spel från Kakmonstret AB.
